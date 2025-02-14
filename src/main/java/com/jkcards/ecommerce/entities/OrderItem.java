@@ -7,19 +7,19 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_ordem_item")
-public class OrdemItem {
+@Table(name = "tb_order_item")
+public class OrderItem {
 
     @EmbeddedId
     private OrdemItemPK id = new OrdemItemPK();
     private Integer quantity;
     private Double price;
 
-    public OrdemItem(){
+    public OrderItem(){
 
     }
 
-    public OrdemItem(Order order,Product product,
+    public OrderItem(Order order, Product product,
                      Integer quantity, Double price) {
 
         id.setOrder(order);
